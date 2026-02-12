@@ -1,6 +1,7 @@
 package org.example;
 
 public class producto {
+
     private String tipo;
 
     public producto() {
@@ -24,6 +25,4 @@ public class producto {
                 "tipo='" + tipo + '\'' +
                 '}';
     }
-
-
 }

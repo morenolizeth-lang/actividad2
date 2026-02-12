@@ -4,17 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class pedido {
+
     private String Nmbre;
     private String Direccion;
 
-    List<producto> productos =new ArrayList<>();
+    List<producto> productos = new ArrayList<>();
 
     public pedido() {
     }
 
-    public pedido(String nmbre, String direccion) {
+    public pedido(String nmbre, String direccion, List<producto> productos) {
         Nmbre = nmbre;
         Direccion = direccion;
+        this.productos = productos;
     }
 
     public String getNmbre() {
@@ -38,10 +40,11 @@ public class pedido {
         return "pedido{" +
                 "Nmbre='" + Nmbre + '\'' +
                 ", Direccion='" + Direccion + '\'' +
+                ", productos=" + productos +
                 '}';
     }
-    public void detalles(producto productos){
-        this.productos.add(productos);
-    }
 
+    public void detalles(producto producto){
+        this.productos.add(producto);
+    }
 }
