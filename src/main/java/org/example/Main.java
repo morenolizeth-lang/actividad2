@@ -8,16 +8,18 @@ public class Main {
 
         List<producto> lstVacia = new ArrayList<>();
 
-        producto pr1 = new producto("jabon");
-        producto pr2 = new producto("shampoo");
-        producto pr3 = new producto("crema");
+        producto pr1 = new producto("jabon", "Colgate", 3500);
 
         pedido p1 = new pedido("jhon", "141414", lstVacia);
 
         p1.detalles(pr1);
-        p1.detalles(pr2);
-        p1.detalles(pr3);
 
-        System.out.println(p1.toString());
+        // Primero el pedido
+        System.out.println(p1);
+
+        // Luego los productos
+        for (producto e : p1.getProductos()) {
+            System.out.println(e);
+        }
     }
 }

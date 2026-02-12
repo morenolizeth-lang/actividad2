@@ -35,16 +35,23 @@ public class pedido {
         Direccion = direccion;
     }
 
+    public List<producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<producto> productos) {
+        this.productos = productos;
+    }
+
+    public void detalles(producto producto){
+        this.productos.add(producto);
+    }
+
     @Override
     public String toString() {
         return "pedido{" +
                 "Nmbre='" + Nmbre + '\'' +
                 ", Direccion='" + Direccion + '\'' +
-                ", productos=" + productos +
                 '}';
-    }
-
-    public void detalles(producto producto){
-        this.productos.add(producto);
     }
 }
